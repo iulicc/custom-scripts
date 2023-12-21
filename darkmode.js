@@ -1,10 +1,15 @@
 console.log("Script loaded!!!!!");
 
+ // Wait for the DOM to be fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            // Target the element by its ID
+            var element = document.getElementById("htmlblock-00000010-acc");
 
-        var themeButton = form.querySelector('button#theme-btn');
-
-
-            themeButton.addEventListener('click', function() {
-                // When the button is clicked, log 'Hello World' to the console
-                console.log('Hello World');
-            });
+            // Check if the element exists
+            if (element) {
+                // Console log the element
+                console.log(element);
+            } else {
+                console.log("Element not found.");
+            }
+        });
