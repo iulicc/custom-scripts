@@ -1,8 +1,6 @@
 console.log("Script loaded!!!!!");
 
- // Wait for the DOM to be fully loaded
-        document.addEventListener("DOMContentLoaded", function() {
-            // Target the element by its ID
+
             var element = document.getElementById("htmlblock-00000010-acc");
 
             // Check if the element exists
@@ -12,4 +10,4 @@ console.log("Script loaded!!!!!");
             } else {
                 console.log("Element not found.");
             }
-        });
+
