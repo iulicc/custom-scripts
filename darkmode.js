@@ -1,23 +1,16 @@
 console.log("Script loaded.");
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the iframe with the specified class
-    var iframe = document.querySelector('.preview-app__iframe__iframe-view');
+// First, we wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Then, we find the form element by its ID
+    var form = document.getElementById('form');
 
-    // Check if the iframe is available
-    if (iframe) {
-        // Access the contentDocument of the iframe
-        var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
-        // Access elements within the iframe
-        var form = iframeDocument.getElementById("form");
-        var button = form.querySelector('div[data-id="111052249"] button');
-
-        // Add a click event listener to the button inside the iframe
-        button.addEventListener("click", function() {
-            console.log("Hello World");
+    // Check if the form exists to avoid null reference errors
+    if (form) {
+        // Add a click event listener to the form
+        form.addEventListener('click', function() {
+            // When the form is clicked, log 'Hello World' to the console
+            console.log('Hello World');
         });
-    } else {
-        console.log("Iframe not found.");
     }
 });
